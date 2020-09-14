@@ -51,7 +51,7 @@ def create_pose_data():
 	start_t = time.time()
 	# for video in info.keys():
 	for video in info:
-		fn = '{}{2d}.txt'.format(par.pose_dir, video)
+		fn = '{}{%2d}.txt'.format(par.pose_dir, video)
 		print('Transforming {}...'.format(fn))
 		with open(fn) as f:
 			lines = [line.split('\n')[0] for line in f.readlines()] 
