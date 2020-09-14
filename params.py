@@ -5,7 +5,7 @@ class Parameters():
 		self.n_processors = 8
 		# Path
 		# self.data_dir =  '/home/ssy/workspace/DeepVO-pytorch/KITTI/'
-		self.data_dir =  '/media/ssy/seungyeon/dataset/MidAir/Kite_training/sunny/'
+		self.data_dir =  '/home/ec2-user/dataset/midair/'
 		self.image_dir = self.data_dir + 'images/'
 		self.pose_dir = self.data_dir + 'pose_GT/'
 		self.imu_dir = self.data_dir + 'imu/'
