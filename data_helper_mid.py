@@ -202,7 +202,7 @@ class ImageSequenceDataset(Dataset):
             #transform_ops.append(transforms.CenterCrop((new_sizeize[0], new_sizeize[1])))
             #seungyeonwrite
             #transform_ops.append(albumentations.Resize(new_sizeize[0]. new_sizeize[1]))
-            transform_ops.append(albumentations.CentorCrop((new_sizeize[0].new_sizeize[1])))
+            transform_ops.append(albumentations.CenterCrop((new_sizeize[0].new_sizeize[1])))
             transform_ops.append(albumentations.pytorch.transforms.ToTensor())
         elif resize_mode == 'rescale':
             transform_ops.append(transforms.Resize((new_sizeize[0], new_sizeize[1])))
