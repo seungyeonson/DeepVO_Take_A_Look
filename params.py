@@ -19,7 +19,7 @@ class Parameters():
 		
 
 		# Data Preprocessing
-		self.resize_mode = 'rescale'  # choice: 'crop' 'rescale' None
+		self.resize_mode = 'crop'  # choice: 'crop' 'rescale' None
 		# self.img_w = 608   # original size is about 1226
 		# self.img_h = 184   # original size is about 370
 		self.img_w = 338   # original size is about 1226
