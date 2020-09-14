@@ -199,19 +199,14 @@ class ImageSequenceDataset(Dataset):
         # Transforms
         transform_ops = []
         if resize_mode == 'crop':
-            #transform_ops.append(transforms.CenterCrop((new_sizeize[0], new_sizeize[1])))
-            #seungyeonwrite
-            #transform_ops.append(albumentations.Resize(new_sizeize[0]. new_sizeize[1]))
-            transform_ops.append(albumentations.CenterCrop((new_sizeize[0],new_sizeize[1])))
-            #transform_ops.append(albumentations.pytorch.ToTensor())
+            transform_ops.append(transforms.CenterCrop((new_sizeize[0], new_sizeize[1])))
+
         elif resize_mode == 'rescale':
             transform_ops.append(transforms.Resize((new_sizeize[0], new_sizeize[1])))
-        #ssy write
-        #transform_ops.append(transforms.ToTensor())
+
+        transform_ops.append(transforms.ToTensor())
         # transform_ops.append(transforms.Normalize(mean=img_mean, std=img_std))
-        #self.transformer = transforms.Compose(transform_ops)
-        #seungyeon write
-        self.transformer = albumentations.Compose(transform_ops)
+        self.transformer = transforms.Compose(transform_ops)
         self.minus_point_5 = minus_point_5
         self.normalizer = transforms.Normalize(mean=img_mean, std=img_std)
         self.data_info = info_dataframe
